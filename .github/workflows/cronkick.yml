@@ -1,0 +1,8 @@
+name: cronkick
+on:
+  workflow_dispatch: # cronkick: "*/15 * * * *"
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by Cronkick at $(date -u +%H:%M:%S)"
